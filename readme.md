@@ -1,12 +1,12 @@
 # PROJECT IS IN DEVELOPMENT PHASE AND I AM REBUILDING THIS PROJECTS.
 
-live link : https://ai-guruji.netlify.app/
+live link :
 
 
 
-# AI Guruji - AI-Powered Career Guidance Platform (SIH - 2023 winner project)
+# AI Career Guidance - AI-Powered Career Guidance Platform
 
-AI Guruji is a career counseling platform for secondary and higher secondary school students. It helps students explore their strengths and interests through a series of assessments and provides AI-driven guidance based on test results. This application integrates psychometric testing with AI, enabling students to make informed decisions about their future education and career paths.
+AI Career Guidance is a career counseling platform for secondary and higher secondary school students. It helps students explore their strengths and interests through a series of assessments and provides AI-driven guidance based on test results. This application integrates psychometric testing with AI, enabling students to make informed decisions about their future education and career paths.
 
 ## Features
 
