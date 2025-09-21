@@ -98,6 +98,12 @@ ai-guruji/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Contributor
+
+Thanks goes to these amazing people:
+
+<table> <tr> <td align="center"> <a href="https://github.com/panuj049"> <img src="https://avatars.githubusercontent.com/u/000000000?v=4" width="100px;" alt="Anuj Pawar"/><br /> <sub><b>Anuj Pawar</b></sub> </a> </td> <td align="center"> <a href="https://github.com/Sakshigaikwad1616"> <img src="https://avatars.githubusercontent.com/Sakshigaikwad1616" width="100px;" alt="Sakshi Gaikwad"/><br /> <sub><b>Sakshi Gaikwad</b></sub> </a> </td> <td align="center"> <a href="https://github.com/sudarshan123-sd"> <img src="https://avatars.githubusercontent.com/sudarshan123-sd" width="100px;" alt="Sudarshan Dhumal"/><br /> <sub><b>Sudarshan Dhumal</b></sub> </a> </td> <td align="center"> <a href="https://github.com/satyam227"> <img src="https://avatars.githubusercontent.com/satyam227" width="100px;" alt="Satyam Panchal"/><br /> <sub><b>Satyam Panchal</b></sub> </a> </td> </tr> </table>
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
