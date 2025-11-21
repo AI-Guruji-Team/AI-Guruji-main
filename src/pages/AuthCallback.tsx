@@ -8,34 +8,39 @@ export default function AuthCallback() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Add a timeout to prevent infinite loading
+    // Safety timeout to avoid infinite loading
     const timeoutId = setTimeout(() => {
-      console.log('Auth callback timed out, redirecting to dashboard');
+      console.log('Auth callback timed out — redirecting');
       navigate('/dashboard');
-    }, 5000); // 5 second timeout
+    }, 6000);
 
-    // Handle the OAuth callback
-    const handleAuthCallback = async () => {
+    const handleOAuthCallback = async () => {
       try {
-        const { error } = await supabase.auth.getSession();
-        
+        // This is CRITICAL: exchange ?code= for Supabase session
+        const { data, error } = await supabase.auth.exchangeCodeForSession(
+          window.location.href
+        );
+
         if (error) {
-          console.error('Error during auth callback:', error);
+          console.error('OAuth callback error:', error.message);
           setError(error.message);
           navigate('/login');
-        } else {
-          navigate('/dashboard');
+          return;
         }
+
+        console.log("OAuth Success:", data);
+        navigate('/dashboard');
+
       } catch (err) {
-        console.error('Unexpected error during auth callback:', err);
-        setError('An unexpected error occurred');
+        console.error('Unexpected error:', err);
+        setError('Unexpected error occurred.');
         navigate('/login');
       } finally {
         clearTimeout(timeoutId);
       }
     };
 
-    handleAuthCallback();
+    handleOAuthCallback();
 
     return () => clearTimeout(timeoutId);
   }, [navigate]);
@@ -43,13 +48,13 @@ export default function AuthCallback() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       {error ? (
-        <div className="text-red-600 mb-4">{error}</div>
+        <p className="text-red-600">{error}</p>
       ) : (
         <>
           <LoadingSpinner />
-          <p className="mt-4 text-gray-600">Completing authentication...</p>
+          <p className="mt-4 text-gray-600">Completing sign-in...</p>
         </>
       )}
     </div>
   );
-} 
+}
