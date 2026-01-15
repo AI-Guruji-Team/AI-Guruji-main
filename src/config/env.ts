@@ -18,6 +18,6 @@ export const APP_VERSION = "1.0.0";
 
 // Feature Flags
 export const FEATURES = {
-  ENABLE_GEMINI_API: true, // Set to false to use mock data instead of real API calls
+  ENABLE_GEMINI_API: false, // Set to false to use mock data instead of real API calls
   ENABLE_DEBUG_LOGGING: true, // Set to false in production
 }; 
